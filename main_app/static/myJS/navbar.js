@@ -6,7 +6,6 @@ function extractPath(url) {
 }
 
 let currentPage = extractPath(window.location.href)
-console.log(currentPage)
 
 if (currentPage === ""){
     currentPage = "home"
