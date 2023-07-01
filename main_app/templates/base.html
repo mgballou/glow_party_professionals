@@ -1,0 +1,61 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Glow - Party Professionals</title>
+
+  <link rel="stylesheet" type="text/css" href={% static 'bootswatch/bootstrap.min.css'%} />
+  
+  <script src={% static 'js/bootstrap.bundle.min.js' %}></script>
+  
+  
+</head>
+
+<body>
+  
+    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+        
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Glow</a>
+          <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="navbar-collapse collapse" id="navbarColor02">
+              <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                  <a class="nav-link active" href="#">Home
+                    <span class="visually-hidden">(current)</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Who We Are</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Testimonials</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Booking</a>
+                </li>
+              </ul>
+          </div>
+            
+        </div>
+        
+
+      </nav>
+
+  <main class="">
+    {% block content %}
+    {% endblock %}
+  </main>
+
+  <footer class="">
+    <div>All Rights Reserved, &copy; 2023 Glow Party Professionals &nbsp;</div>
+  </footer>
+  
+</body>
+</html>

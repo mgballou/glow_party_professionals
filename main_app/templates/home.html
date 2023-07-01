@@ -1,0 +1,23 @@
+{% extends 'base.html' %} 
+{% load static %}
+
+{% block content%}
+<section class="container-fluid p-3" style="background: url({% static 'images/hero-image-3.jpeg' %}); aspect-ratio: 16/9; background-size: cover;">
+    <div class="w-100 mx-auto text-bg-light bg-opacity-25 p-3 rounded-5">
+       <p class="display-6 text-center text-uppercase">Experience the vibe</p>
+    
+       <div class="w-75 mx-auto mt-6 p-2 text-center ">
+        <form >
+            <div class="">
+                <label for="newsletter-email" class="form-label">Get our Newsletter </label>
+                <input type="email" name="email" class="form-control border border-3 border-light rounded" id="input-email" aria-describedby="emailHelp" placeholder="enter your email"/>
+            </div>
+            <button type="submit" class="btn btn-outline-primary mt-3 rounded-pill">Let's Party</button>
+        </form>
+
+       </div>
+    
+    </div>
+</section>
+     
+{% endblock %}  
