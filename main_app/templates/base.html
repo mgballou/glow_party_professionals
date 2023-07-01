@@ -20,19 +20,21 @@
     <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
         
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">Glow</a>
+          <a class="navbar-brand" href="{% url 'home'%}">Glow</a>
           <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="navbar-collapse collapse" id="navbarColor02">
               <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                  <a class="nav-link active" href="#">Home
-                    <span class="visually-hidden">(current)</span>
+                  <a class="nav-link" href="{% url 'home'%}" id="home">Home
+                    
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Who We Are</a>
+                  <a class="nav-link" href="{% url 'about' %}" id="about">Who We Are
+                    
+                  </a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#">Testimonials</a>
@@ -56,6 +58,10 @@
   <footer class="container">
     <div>All Rights Reserved, &copy; 2023 Glow Party Professionals &nbsp;</div>
   </footer>
+
+  <script src={% static 'myJS/navbar.js'%}>
+   
+  </script>
   
 </body>
 </html>
