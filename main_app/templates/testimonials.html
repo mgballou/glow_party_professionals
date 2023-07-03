@@ -1,0 +1,137 @@
+{% extends 'base.html' %} 
+{% load static %}
+
+{% block content%}
+
+
+   
+
+<section class="container-xxl p-3" style="background: url({% static 'images/testimonials-4.jpeg' %}); aspect-ratio: 16/9; background-size: cover;">
+    <div class="container">
+        <div class="mt-2 mb-5">
+            <p class="h1">TESTIMONIALS</p>
+            <p class="h4 text-white text-body-secondary">words from our satisfied clientele</p>
+        </div>
+
+
+    </div>
+   
+   
+    <div class="row justify-content-center flex-fill mt-4">
+        <div class="col-12 col-sm-8  col-lg-6">
+
+            <div class="carousel slide carousel-fade w-100 w-md-75 mx-auto" data-bs-ride="carousel" id="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                  </div>
+                <div class="carousel-inner">
+        
+                  <div class="carousel-item active" data-bs-interval="15000">
+                    <div class="card p-3 text-center bg-dark bg-opacity-75 border-secondary">
+                        <div class="card-header display-6 font-monospace text-lowercase">Washington, D.C.</div>
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p>Glow made my birthday party an unforgettable night! From securing the perfect venue, NightclubU, to their impeccable service, everything was flawless. They went above and beyond to ensure a fantastic experience. Highly recommended!</p>
+                                <footer class="blockquote-footer my-3">Ayana Q.</footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                  </div>
+        
+                  <div class="carousel-item" data-bs-interval="15000">
+                    <div class="card p-3 text-center bg-dark bg-opacity-75 border-secondary">
+                        <div class="card-header display-6 font-monospace text-lowercase">New York</div>
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p>Planning our company's afterwork event with Glow was effortless! They secured exclusive guest list access and free entry at NightclubV, where we received VIP treatment all night. The team's attention to detail and exceptional service exceeded our expectations.</p>
+                                <footer class="blockquote-footer my-3">Josiah M.</footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                  </div>
+        
+                  <div class="carousel-item" data-bs-interval="15000">
+                    <div class="card p-3 text-center bg-dark bg-opacity-75 border-secondary">
+                        <div class="card-header display-6 font-monospace text-lowercase">Las Vegas</div>
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p>Using Glow's services for a night out was incredible! Their professionalism and seamless planning allowed us to enjoy NightclubX at a prestigious hotel. No waiting, easy access, and a vibrant crowd made it a night to remember. I'll definitely be using Glow again!</p>
+                                <footer class="blockquote-footer my-3">Harvey S.</footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                  </div>
+
+                <div class="carousel-item" data-bs-interval="15000">
+                    <div class="card p-3 text-center bg-dark bg-opacity-75 border-secondary">
+                        <div class="card-header display-6 font-monospace text-lowercase">New York</div>
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p>I had an incredible time with Glow at Nightclub Pulse. The team's attention to detail was exceptional. They made sure we had a hassle-free experience, and the reserved seating they arranged for us was perfect. I can't wait to use Glow's services again for my next night out!</p>
+                                <footer class="blockquote-footer my-3">Nathan D.</footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item" data-bs-interval="15000">
+                    <div class="card p-3 text-center bg-dark bg-opacity-75 border-secondary">
+                        <div class="card-header display-6 font-monospace text-lowercase">Miami</div>
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p>Glow made my vacation in Miami unforgettable! They arranged an incredible night at Mirage, where we experienced the best of Miami's nightlife. The atmosphere was electric! Glow knows how to create magical moments!</p>
+                                <footer class="blockquote-footer my-3">Sophia L.</footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="carousel-item" data-bs-interval="15000">
+                    <div class="card p-3 text-center bg-dark bg-opacity-75 border-secondary">
+                        <div class="card-header display-6 font-monospace text-lowercase">Los Angeles</div>
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p>My experience with Glow in Los Angeles was absolutely incredible! They made sure we had the VIP treatment at Euphoria. From the moment we arrived, we were treated like A-listers. The memories will last a lifetime. Thank you, Glow!</p>
+                                <footer class="blockquote-footer my-3">Michael T.</footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+        
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+        
+            </div>
+
+
+        </div>
+
+
+        
+
+
+
+
+    </div>
+
+    
+
+    
+    
+
+</section>
+
+{% endblock %}

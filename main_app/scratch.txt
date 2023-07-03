@@ -1,0 +1,22 @@
+    <div class="row">
+        <div class="col-md-4">
+
+        </div>
+        <div class="col-md-8">
+            <div class="card h-100 text-center text-white border-success">
+                <div class="card-header">Washington, D.C.</div>
+                <div class="card-body">
+                    <blockquote class="blockquote mb-0">
+                        <p>Glow made my birthday party an unforgettable night! From securing the perfect venue, NightclubU, to their impeccable service, everything was flawless. They went above and beyond to ensure a fantastic experience. Highly recommended!</p>
+                        <footer class="blockquote-footer">Ayana Q.</footer>
+                    </blockquote>
+                </div>
+            </div>
+          </div>
+            
+
+
+        </div>
+
+
+    </div>

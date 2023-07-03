@@ -1,0 +1,123 @@
+{% extends 'base.html' %} 
+{% load static %}
+
+{% block content%}
+{% comment %} hero section, call to action to join newsletter {% endcomment %}
+<section class="container-xxl p-3 d-flex align-items-center justify-content-center" style="background: url({% static 'images/hero-image-3.jpeg' %}); aspect-ratio: 16/9; background-size: cover;">
+    <div class="row justify-content-center flex-fill">
+        <div class="col-12 col-sm-10  col-lg-8 text-bg-light bg-opacity-25 p-3 rounded-5">
+            <p class="display-6 text-center text-uppercase">Experience the vibe</p>
+         
+            <div class="w-75 mx-auto p-2 text-center">
+             <form class="d-flex flex-column gap-2">
+                {% csrf_token %}
+                <p class="lead text-center text-bg-dark p-4 rounded-5 bg-opacity-75 border border-2 border-success">Subscribe for upcoming events</p>
+
+                {% for field in subscription_form %}
+                    <div class="form-floating text-light">
+                    {{ field }}
+                    {{ field.label_tag}}
+                    {{ field.errors }}
+                    {% if field.help_text %}
+                        <p class="help">{{ field.help_text }}</p>
+                    {% endif %}
+                    </div>
+                {% endfor %}
+
+                 {% comment %} <div class="form-floating">
+                     <input type="email" name="email" class="form-control border border-dark border-2 rounded-3" id="input-email" aria-describedby="emailHelp" placeholder="enter your email"/>
+                     <label for="newsletter-email" class="form-label">Email</label>
+                 </div>
+                 <div class="form-floating">
+                    <input type="select" name="city" class="form-control border border-dark border-2 rounded-3" id="input-city" aria-describedby="cityHelp" placeholder="enter your city"/>
+                    <label for="newsletter-city" class="form-label">City</label>
+                </div> {% endcomment %}
+
+
+                 <button type="submit" class="btn btn-dark btn-outline-secondary mt-3 rounded-pill w-50 mx-auto">Let's Party</button>
+             </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% comment %} brand blurb section {% endcomment %}
+
+
+<section class="container p-3">
+    <div class="mt-4 mb-5 text-center">
+        <p class="h1">FEATURED EVENTS</p>
+        
+    </div>
+
+    <div class="row align-items-center my-4">
+        <div class="col-12 col-md-4">
+            <img class="img-fluid img-thumbnail" src={% static 'images/event-1.jpeg'%} alt="DJ"/>
+
+        </div>
+        <div class="col-12 col-md-8">
+            <div class="card bg-dark p-4" >
+                <div class="card-header text-decoration-underline lead">
+                    Three Nights with 'The Emminent Tervo'
+                </div>
+
+                <div class="card-body">
+                    World-renowned one-man band 'The Eminent Tervo' is set to perform at a spectacular three-night festival event in the heart of Miami. This exclusive event promises an unforgettable experience for music enthusiasts. With Glow's VIP access, you'll have the opportunity to witness mesmerizing performances, immerse yourself in a vibrant atmosphere, and get backstage with Tervo himself. Don't miss out on this extraordinary event!
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+
+    <div class="row align-items-center my-3">
+       
+        <div class="col-12 col-md-8">
+            <div class="card bg-dark p-4" >
+                <div class="card-header text-decoration-underline lead">
+                    The Green Room
+                </div>
+
+                <div class="card-body">
+                    Step into an extraordinary one-time experience in collaboration with lauded creative director Martino Jupiter. The Green Room promises an immersive journey where art, music, and social commentary intertwine in a mesmerizing display of light and sound. Martino Jupiter's distinctive vision creates a thought-provoking atmosphere that challenges societal norms with interactive exhibits and live performances. This event is a testament to the power of art to transform perspectives. 
+                </div>
+            </div>
+
+        </div>
+        <div class="col-12 col-md-4">
+            <img class="img-fluid img-thumbnail" src={% static 'images/event-2.jpeg'%} alt="DJ"/>
+
+        </div>
+        
+    </div>
+
+    <div class="row align-items-center mt-3 mb-5">
+        <div class="col-12 col-md-4">
+            <img class="img-fluid img-thumbnail" src={% static 'images/event-3.jpeg'%} alt="DJ"/>
+
+        </div>
+        <div class="col-12 col-md-8">
+            <div class="card bg-dark p-4" >
+                <div class="card-header text-decoration-underline lead">
+                    ColorWild Pop Ups
+                </div>
+
+                <div class="card-body">
+                    Immerse yourself in a captivating fusion of vibrant color explosions at our ColorWild Pop Ups. Prepare for a transcendent experience like no other - ColorWild promises to envelop you in a world of vibrance and leave you with lasting impressions that resonate long after the event ends. Glow brings ColorWild to choice locations not just across the US, but across the globe.
+
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+
+
+
+
+
+</section>
+
+
+     
+{% endblock %}  

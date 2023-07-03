@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="container p-3">
+    <div class="mt-2 mb-5">
+        <p class="h1">BOOKING</p>
+        <p class="h4 text-white text-body-secondary">the perfect party experience</p>
+    </div>
+<form class="bg-light bg-opacity-25 p-3 mx-auto d-flex flex-column gap-4 rounded-5 my-4" action="" method-"POST">
+    <p class="lead text-center text-bg-dark p-4 rounded-5 bg-opacity-75 border border-2 border-success">Get <span class="text-light fst-italic fw-lighter mx-1">Glow</span> for your special occasion</p>
+    {% csrf_token %}
+    
+    {% comment %} {{ form.as_p }} {% endcomment %}
+
+    {% for field in form %}
+    <div class="form-floating">
+      {{ field }}
+      {{ field.label_tag}}
+      {{ field.errors }}
+      {% if field.help_text %}
+        <p class="help">{{ field.help_text }}</p>
+      {% endif %}
+    </div>
+  {% endfor %}
+    
+    <button type="submit" class="btn btn-dark btn-outline-secondary rounded-pill my-3 w-50 mx-auto">Submit</button>
+
+</form>
+
+
+</section>
+
+
+
+{% endblock %}
