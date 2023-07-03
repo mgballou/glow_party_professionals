@@ -11,7 +11,7 @@
             <div class="w-75 mx-auto p-2 text-center">
              <form class="d-flex flex-column gap-2">
                 {% csrf_token %}
-                <p class="lead text-center text-bg-dark p-4 rounded-5 bg-opacity-75 border border-2 border-secondary">Subscribe for upcoming events</p>
+                <p class="lead text-center text-bg-dark p-4 rounded-5 bg-opacity-75 border border-2 border-success">Subscribe for upcoming events</p>
 
                 {% for field in subscription_form %}
                     <div class="form-floating text-light">
@@ -44,5 +44,60 @@
 {% comment %} brand blurb section {% endcomment %}
 
 {% comment %} Featured events section {% endcomment %}
+
+<section class="container p-3">
+    <div class="mt-2 mb-5 text-center">
+        <p class="h1">FEATURED EVENTS</p>
+        
+    </div>
+
+    <div class="row align-items-center my-3">
+        <div class="col-12 col-md-4">
+            <img class="img-fluid img-thumbnail" src={% static 'images/event-1.jpeg'%} alt="DJ"/>
+
+        </div>
+        <div class="col-12 col-md-8">
+            <div class="card bg-dark p-4" >
+                <div class="card-header">
+                    Three Nights with 'The Emminent Tervo'
+                </div>
+
+                <div class="card-body">
+                    World-renowned one-man band 'The Eminent Tervo' is set to perform at a spectacular three-night festival event in the heart of Miami. This exclusive event promises an unforgettable experience for music enthusiasts. With Glow's VIP access, you'll have the opportunity to witness mesmerizing performances, immerse yourself in a vibrant atmosphere, and get backstage with Tervo himself. Don't miss out on this extraordinary event!
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+
+    <div class="row align-items-center my-3">
+       
+        <div class="col-12 col-md-8">
+            <div class="card bg-dark p-4" >
+                <div class="card-header">
+                    The Green Room
+                </div>
+
+                <div class="card-body">
+                    Step into an extraordinary one-time experience in collaboration with lauded creative director Martino Jupiter. The Green Room promises an immersive journey where art, music, and social commentary intertwine in a mesmerizing display of light and sound. Martino Jupiter's distinctive vision creates a thought-provoking atmosphere that challenges societal norms with interactive exhibits and live performances. This event is a testament to the power of art to transform perspectives. 
+                </div>
+            </div>
+
+        </div>
+        <div class="col-12 col-md-4">
+            <img class="img-fluid img-thumbnail" src={% static 'images/event-2.jpeg'%} alt="DJ"/>
+
+        </div>
+        
+    </div>
+
+
+
+
+
+</section>
+
+
      
 {% endblock %}  
