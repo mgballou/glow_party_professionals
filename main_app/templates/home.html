@@ -9,7 +9,12 @@
             <p class="display-6 text-center text-uppercase">Experience the vibe</p>
          
             <div class="w-75 mx-auto p-2 text-center">
-             <form class="d-flex flex-column gap-2">
+                {% if subscription_form == null %}
+                <div class="d-flex flex-column gap-2">
+                    <p class="lead text-center text-bg-dark p-4 rounded-5 bg-opacity-75 border border-2 border-success">Thanks for subscribing!</p>
+                </div>
+                {% else %}
+             <form class="d-flex flex-column gap-2" action="" method="POST">
                 {% csrf_token %}
                 <p class="lead text-center text-bg-dark p-4 rounded-5 bg-opacity-75 border border-2 border-success">Subscribe for upcoming events</p>
 
@@ -24,18 +29,10 @@
                     </div>
                 {% endfor %}
 
-                 {% comment %} <div class="form-floating">
-                     <input type="email" name="email" class="form-control border border-dark border-2 rounded-3" id="input-email" aria-describedby="emailHelp" placeholder="enter your email"/>
-                     <label for="newsletter-email" class="form-label">Email</label>
-                 </div>
-                 <div class="form-floating">
-                    <input type="select" name="city" class="form-control border border-dark border-2 rounded-3" id="input-city" aria-describedby="cityHelp" placeholder="enter your city"/>
-                    <label for="newsletter-city" class="form-label">City</label>
-                </div> {% endcomment %}
-
 
                  <button type="submit" class="btn btn-dark btn-outline-secondary mt-3 rounded-pill w-50 mx-auto">Let's Party</button>
              </form>
+             {% endif %}
             </div>
         </div>
     </div>

@@ -1,5 +1,6 @@
 from django.db import models
 from phonenumber_field.modelfields import PhoneNumberField
+from django.urls import reverse
 
 # Create your models here.
 
@@ -29,3 +30,11 @@ class Booking(models.Model):
     date = models.DateField(null=False)
     event_description = models.TextField(max_length=500)
     number_of_guests = models.IntegerField()
+
+    def __str__(self):
+        return self.email
+
+    def get_absolute_url(self):
+        return reverse('confirm', kwargs={'booking_id': self.id})
+
+
